@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Kalkulator - štednja</title>
+</head>
+<body>
+
+		<h1>Kalkulator - štednja</h1>
+
+		<div class="container">
+			<h3>Ušteđevina: <input type = "text" id = "novac1"> RSD</h3> <br>
+			<h3>Cena željenog artikla: <input type = "text" id = "novac2"> RSD</h3> <br>
+			<h3>Mesečno štedim: <input type = "text" id = "novac3"> RSD</h3> <br>
+			<h3>Koliko meseci do cilja? <input type = "text" id = "mesec"> </h3> <br>
+
+			<button onclick="KalkulatorStednje()">Izračunaj</button>
+		</div>
+
+	<script>
+		function KalkulatorStednje() {
+	var usteda = parseInt(document.getElementById("novac1").value);
+	var cena = parseInt(document.getElementById("novac2").value);
+	var mesecno = parseInt(document.getElementById("novac3").value);
+
+	var razlika = cena - usteda;
+
+	var brojmeseci = razlika / mesecno;
+	
+	document.getElementById("mesec").value = brojmeseci;
+}
+
+	</script>
+</body>
+</html>

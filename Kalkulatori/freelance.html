@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Obračun poreza po modelima</title>
+</head>
+<body>
+	<h1>Obračun poreza po modelima</h1>
+
+		<div class="container">
+			<h3>Plata 1: <input type = "text" id = "novac1" class="form-control"> € </h3> <br>
+			<h3>Plata 2: <input type = "text" id = "novac2" class="form-control"> € </h3> <br>
+			<h3>Plata 3: <input type = "text" id = "novac3" class="form-control"> € </h3> <br>
+			<h3>Porez po modelu A: <input type = "text" id = "iznos1" class="form-control"> RSD </h3> <br>
+
+			<input type="button" value="Izračunaj" onclick="KalkulatorPorezaA()">
+
+			<h3>Porez po modelu B: <input type = "text" id = "iznos2" class="form-control"> RSD </h3> <br>
+
+			<input type="button" value="Izračunaj" onclick="KalkulatorPorezaB()">
+
+
+	<script>
+		function KalkulatorPorezaA() {
+	var plata1 = parseInt(document.getElementById("novac1").value);
+	var plata2 = parseInt(document.getElementById("novac2").value);
+	var plata3 = parseInt(document.getElementById("novac3").value);
+
+	var novoA = (((plata1 + plata2 + plata3) * 117.5) - 96000) * 20/100;
+	
+	document.getElementById("iznos1").value = novoA;
+}
+
+		function KalkulatorPorezaB() {
+	var plata1 = parseInt(document.getElementById("novac1").value);
+	var plata2 = parseInt(document.getElementById("novac2").value);
+	var plata3 = parseInt(document.getElementById("novac3").value);
+
+	var novoB = ((((plata1 + plata2 + plata3) * 117.5) - 57900) - (((plata1 + plata2 + plata3) * 117.5) * 34/100)) * 10/100;
+	
+	document.getElementById("iznos2").value = novoB;
+}
+	</script>
+
+</body>
+</html>

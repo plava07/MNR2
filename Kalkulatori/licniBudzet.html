@@ -1,0 +1,107 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kalkulator - lični budžet</title>
+</head>
+<body>
+<div id="app">
+    <h1>Kalkulator - lični budžet</h1>
+    <table>
+        <table class="kolone">
+            <thead>
+            <tr>
+                <th>Opis</th>
+                <th>Tip</th>
+                <th>Iznos</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody class="unos">
+            <tr>
+                <td>
+                    <input class="input input-description" type="text"
+                           placeholder="Dodaj opis, napr. džeparac, grickalice, odeća, ušteđevina..." id="tekst">
+                </td>
+                <td>
+                    <select class="input input-type">
+                        <option value="prihod" id="prihod">Prihod</option>
+                        <option value="rashod" id="rashod">Rashod</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" class="input input-amount" id="novac1"> RSD
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <h3>
+            <input type="button" value="Novi unos" onclick="noviUnos()">
+        </h3>
+
+        <h3><input type="text" id="novac2" class="form-control"> RSD</h3>
+        <input type="button" value="Ukupno" onclick="Ukupno()">
+
+        
+
+    </table>
+</div>
+<script>
+
+    function noviUnos() {
+        const unos = document.querySelector('.unos');
+        const tr = document.createElement('tr');
+        const td1 = document.createElement('td');
+        const input1 = document.createElement('input');
+        input1.className = 'input input-description';
+        input1.type = 'text';
+        input1.placeholder = 'Dodaj opis, napr. džeparac, grickalice, odeća, ušteđevina...';
+        input1.id = 'tekst';
+        td1.appendChild(input1);
+        tr.appendChild(td1);
+        const td2 = document.createElement('td');
+        const select = document.createElement('select');
+        select.className = 'input input-type';
+        const option1 = document.createElement('option');
+        option1.value = 'prihod';
+        option1.id = 'prihod';
+        option1.textContent = 'Prihod';
+        const option2 = document.createElement('option');
+        option2.value = 'rashod';
+        option2.id = 'rashod';
+        option2.textContent = 'Rashod';
+        select.appendChild(option1);
+        select.appendChild(option2);
+        td2.appendChild(select);
+        tr.appendChild(td2);
+        const td3 = document.createElement('td');
+        const input2 = document.createElement('input');
+        input2.type = 'number';
+        input2.className = 'input input-amount';
+        input2.id = 'novac1';
+        td3.appendChild(input2);
+        tr.appendChild(td3);
+        unos.appendChild(tr);
+    }
+
+    function Ukupno() {
+        var suma = 0;
+        const unosRows = document.querySelectorAll('.unos tr');
+        unosRows.forEach((row) => {
+            const select = row.querySelector('.input-type');
+            const tip = select.value;
+            const uneseno = parseInt(row.querySelector('.input-amount').value);
+
+                if(tip === "prihod") {
+                    suma = suma + uneseno;
+                } else {
+                    suma = suma - uneseno;
+                }
+        });
+
+        document.getElementById("novac2").value = suma;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Računanje povećanja plate za uneseni procenat</title>
+</head>
+<body>
+	<h1>Računanje povećanja plate za uneseni procenat</h1>
+
+		<div class="container">
+			<h3>Plata: <input type = "text" id = "novac1" class="form-control"> € </h3> <br>
+			<h3>Procenat: <input type = "text" id = "procenat" class="form-control"> % </h3> <br>
+			<h3>Nova plata u evrima: <input type = "text" id = "novac2" class="form-control"> </h3> <br>
+
+			<input type="button" value="Izračunaj A" onclick="KalkulatorPovecanjeEvro()">
+
+			<h3>Nova plata u dinarima: <input type = "text" id = "novac3" class="form-control"> </h3> <br>
+
+			<input type="button" value="Izračunaj B" onclick="KalkulatorPovecanjeDinar()">
+
+	<script>
+		function KalkulatorPovecanjeEvro() {
+	var plata1 = parseInt(document.getElementById("novac1").value);
+	var procenat = parseInt(document.getElementById("procenat").value);
+
+	var novoEvro = plata1 + (plata1 * procenat/100);
+	
+	document.getElementById("novac2").value = novoEvro;
+}
+
+		function KalkulatorPovecanjeDinar() {
+	var plata1 = parseInt(document.getElementById("novac1").value);
+	var procenat = parseInt(document.getElementById("procenat").value);
+
+	var novoDinar = (plata1 + (plata1 * procenat/100)) * 117.5;
+
+	document.getElementById("novac3").value = novoDinar;
+}
+	</script>
+</body>
+</html>
