@@ -7,7 +7,7 @@
 </head>
 <body>
 
-		<h1>Kalkulator - rivolving kartica</h1>
+		<h1>Kalkulator - revolving kartica</h1>
 
 		<div class="container">
 			<h3>Trenutno zaduženje: <input type = "text" id = "novac1" class="form-control"> RSD </h3> <br>
@@ -23,7 +23,7 @@
 	var raspolozivo = parseInt(document.getElementById("novac2").value);
 	var procenat = parseInt(document.getElementById("procenat").value);
 
-	var novo = raspolozivo + (zaduzenje * (procenat/100));
+	var novo = raspolozivo - zaduzenje + (zaduzenje * (procenat/100));
 	
 	document.getElementById("novac3").value = novo;
 }
