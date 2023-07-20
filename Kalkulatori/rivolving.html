@@ -23,7 +23,7 @@
 	var raspolozivo = parseInt(document.getElementById("novac2").value);
 	var procenat = parseInt(document.getElementById("procenat").value);
 
-	var novo = raspolozivo - zaduzenje + (zaduzenje * (procenat/100));
+	var novo = raspolozivo + (zaduzenje * (procenat/100));
 	
 	document.getElementById("novac3").value = novo;
 }
