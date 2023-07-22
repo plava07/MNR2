@@ -9,6 +9,33 @@
 
 		<h1>Kalkulator - štednja u banci</h1>
 
+			          <article> 
+                       
+                <p>Štednja u banci je finansijska praksa u kojoj pojedinac oroči svoj novac u banci kako bi ga sačuvao i zaradio na kamatama tokom određenog perioda. Da biste počeli sa štednjom u banci, potrebno je da prvo otvorite štedni račun. Ovo možete uraditi u filijali banke ili često i online putem internet bankarstva.
+                <br>Štedni računi mogu biti oročeni ili nenoročeni. Oročeni štedni računi podrazumevaju da novac ne možete podići pre isteka određenog perioda (npr. 3 meseca, 6 meseci, 1 godina). Uz oročenje, banka vam obično nudi veću kamatnu stopu kako bi vas ohrabrila da novac ostavite duže na računu. Nenoročeni štedni računi omogućavaju vam da podižete novac kad god želite.
+                <br>Banka će vam plaćati kamatu na novac koji imate na štednom računu. Kamatne stope variraju i obično se izražavaju kao godišnji procenat (npr. 2% godišnje). Kamate se obračunavaju na osnovu iznosa novca koji imate na računu i perioda štednje.
+
+                <br><br>Uglavno se koriste pojmovi "glavnica" i "kamata", a ćemo objasniti njihovo značenje.
+                <br>Glavnica predstavlja osnovni iznos novca koji je oročen ili pozajmljen. To je početna suma novca na koju se obračunavaju kamate ili koja se koristi za investicije i druge finansijske transakcije. U kontekstu štednje u banci, glavnica je iznos novca koji je uplaćen na štedni račun.
+                <br>Na primer, ako deponirate 1.000 evra na štedni račun, tih 1.000 evra predstavlja glavnicu.
+                <br>Kamata je dodatni novčani iznos koji se plaća ili zarađuje kao naknada za korišćenje novca. Kada uplatite novac na štedni račun u banci, banka vam plaća kamatu na taj iznos. Sa druge strane, kada pozajmljujete novac od banke, morate plaćati kamatu na taj pozajmljeni iznos.
+                <br>Kamatna stopa je procenat po kojem se kamata obračunava. Ona može biti godišnja (godinje kamatne stope) ili može biti obračunata za kraći period, kao što je mesečna ili kvartalna kamatna stopa.
+                <br>Na primer, ako je kamatna stopa na štedni račun 2% godišnje, a imate 1.000 evra kao glavnicu na tom računu, kamata će biti 2% od 1.000 evra, što je 20 evra godišnje. Ako se kamata obračunava mesečno, to bi iznosilo oko 1,67 evra mesečno (20 evra / 12 meseci).<br></p>
+
+                <p>Recimo da ste tokom putovanja u Solun stekli utisak da treba da ponovite odmor u Grčkoj, ali ovaj put birate destinaciju za koju će morate izdvojiti više novca, odnosno za koju morate više uštediti. Odlučeno je da štedite za Santorini, a put je planiran za 13 meseci. <br>Naučili ste kako funkcioniše štednja u banci i sada, umesto mesečnog uplaćivanja novca na račun, želite da oročite svoju ušteđevinu u evrima. Pretpostavimo da imate 800 evra koje želite oročiti u banci na period od 12 meseci sa kamatnom stopom od 2,5% (0,025 u decimalnom obliku).
+                <br>Da bismo izračunali krajnji iznos koji ćete dobiti nakon 12 meseci, koristićemo formulu za kamatno obračunavanje:
+                    <ul> 
+                        <li>Krajnji iznos = Početna glavnica x (1 + (Kamatna stopa / 100) x (Broj meseci / 12)) <br> Krajnji iznos = 800 evra x (1 + (0,025 / 100) x (12 / 12))</li>
+					</ul> 
+
+                    <p>Nakon 12 meseci oročenja, imaćete 820 evra na svom štednom računu. Razlika od 20 evra je kamata koju ste zaradili tokom 12 meseci.<br></p>
+
+                <p>Pre nego što otvorite štedni račun u banci, preporučuje se da istražite različite banke i uporedite njihove kamatne stope kako biste pronašli najbolju opciju za svoje potrebe. Takođe, obratite pažnju na bilo kakve naknade ili troškove koje banka može naplatiti za otvaranje ili održavanje štednog računa.</p> 
+
+                <br>
+
+            </article>  
+
 		<div class="container">
 			<h3>Glavnica: <input type = "text" id = "novac1" class="form-control"> RSD </h3> <br>
 			<h3>Kamata: <input type = "text" id = "procenat" class="form-control"> % </h3> <br>
@@ -19,13 +46,13 @@
 
 	<script>
 		function KalkulatorStednje2() {
-	var glavnica = parseInt(document.getElementById("novac1").value);
-	var kamata = parseInt(document.getElementById("procenat").value);
+	var glavnica = parseFloat(document.getElementById("novac1").value);
+	var kamata = parseFloat(document.getElementById("procenat").value);
 	var meseci = parseInt(document.getElementById("mesec").value);
 
-	var zarada = (glavnica*kamata*meseci)/1200;
+	var zarada = glavnica * (1 + (kamata / 100 * (meseci / 12)));
 	
-	document.getElementById("novac2").value = zarada;
+	document.getElementById("novac2").value = zarada.toFixed(2);
 }
 	</script>
 </body>
