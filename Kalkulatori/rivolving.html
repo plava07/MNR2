@@ -9,6 +9,68 @@
 
 		<h1>Kalkulator - revolving kartica</h1>
 
+			          <article> 
+                       
+                <p>Revolving kreditna kartica je vrsta kartice omogućava korisniku (klijentu banke) da troši do odobrenog kreditnog limita i vraća dug u delovima svakog meseca, uz naplatu kamate na preostali dug.<ul> 
+                        <li>Klijent koristi revolving karticu da kupuje različite proizvode i usluge tokom meseca. Na kraju meseca, klijent dobija izveštaj sa iznosom za vraćanje na osnovu potrošenog novca.
+
+                        <br>
+
+                        <li>Klijent ima opciju da vrati celokupan iznos duga, delimično vrati deo duga ili minimalni iznos duga. Banka zaračunava kamatu na preostali dug ako klijent ne vrati ceo iznos.</li>
+
+                        <br>
+
+                        <li>Ako klijent odluči da vrati samo minimalni iznos duga, banka će naplatiti kamatu na preostali dug koji nije vraćen. Kamata može biti veoma visoka i često prevazilazi 20% godišnje.</li>
+
+                        <br>
+
+                        <li>Ako klijent nastavi da koristi revolving karticu i ne vraća celokupan dug, dug će se gomilati iz meseca u mesec, a kamata će se zaračunavati na sve preostali dug, uključujući i kamatu koja je već naplaćena.</li>
+
+                        <br>
+
+                        <li>Na ovaj način, banka može zarađivati značajne prihode od kamata na neodgovornom ponašanju klijenta, koji ne vraća dug na vreme i gomila dug preko vremena.</li>
+
+                        <br>
+
+                        <li>Klijent može brzo zapasti u dužničku spiralu ako ne vodi računa o svojim dugovima i ne vraća dugove na vreme. To može dovesti do finansijskih problema i dugoročne finansijske nesigurnosti.</li></li>
+
+                        <br>
+
+                    </ul>
+                </p>Pretpostavimo da imate revolving kreditnu karticu sa odobrenim kreditnim limitom od 50.000 dinara. Tokom jednog meseca, koristite karticu da platite putovanje do Soluna u vrednosti od 20.000 dinara. <br>Da bismo izračunali koliko ćete morati da vratite na karticu, prvo ćemo izračunati minimalni iznos otplate:<ul> 
+                        <li>Minimalni iznos otplate = Trenutno zaduženje (Cena putovanja) x Procenat otplate<br> Minimalni iznos otplate = 20.000 dinara x 0.20 = 4.000 dinara</li>
+					</ul> 
+
+                    <p>Možete da odlučite da vratite minimalni iznos od 4.000 dinara na karticu. Ako to učinite, preostali dug na kartici biće:
+                    <ul> 
+                        <li>Preostali dug = Cena putovanja - Minimalni iznos otplate <br>Preostali dug = 20.000 dinara - 4.000 dinara = 16.000 dinara </li>
+
+                    </ul> 
+
+                    </p>
+
+                <p>Sada, kako bismo izračunali koliko će biti raspoloživo u narednom mesecu, uzmemo u obzir preostali dug i kamatu koja će biti zaračunata na taj dug. Ako pretpostavimo da kamata na revolving karticu iznosi 20% godišnje, kamata za jedan mesec biće:
+                    <ul> 
+                        <li>Kamata za jedan mesec = Preostali dug x (Kamata godišnje / 12) <br>Kamata za jedan mesec = 16.000 dinara x (0.20 / 12) = 266.67 dinara </li>
+					</ul> 
+
+                <p>Sada možemo izračunati koliko će biti raspoloživo u narednom mesecu:
+                
+                    <ul> 
+                        <li>Raspoloživo u narednom mesecu = Kreditni limit (Raspoloživa sredstva) - Preostali dug - Kamata za jedan mesec <br>Raspoloživo u narednom mesecu = 50.000 dinara - 16.000 dinara - 266.67 dinara = 33.733,33 dinara </li>
+					</ul> 
+
+                <p> Dakle, ako odlučite da vratite minimalni iznos od 4.000 dinara na karticu, u narednom mesecu će vam biti na raspolaganju 33.733,33 dinara za korišćenje na kartici. Važno je napomenuti da će se preostali dug povećavati iz meseca u mesec sve dok ne bude potpuno vraćen. Ako se nastavi sa plaćanjem samo minimalnog iznosa, može se dogoditi da dug i kamate na kartici postanu veoma visoke i da se zadužite više nego planirano. <br>Ovo je tipičan primer kako banke mogu zaraditi na neodgovornom ponašanju klijenta.
+
+                </p> 
+
+                <p>Revolving kartice mogu biti korisne i praktične, ali i veoma rizične ako se ne koriste odgovorno. Banka može zarađivati na neodgovornom ponašanju klijenta putem naplate visokih kamata na preostali dug. Klijenti bi trebalo da budu pažljivi pri korišćenju revolving kartica i da ih koriste samo onoliko koliko mogu odmah da vrate, kako bi izbegli finansijske poteškoće i dugoročne probleme sa dugovima. <br>Redovno praćenje iznosa duga i vraćanje dugova na vreme su ključni za odgovorno upravljanje revolving karticom.</p> 
+
+                <br>
+
+            </article>  
+	
+
 		<div class="container">
 			<h3>Trenutno zaduženje: <input type = "text" id = "novac1" class="form-control"> RSD </h3> <br>
 			<h3>Raspoloživa sredstva: <input type = "text" id = "novac2" class="form-control"> RSD </h3> <br>
@@ -23,8 +85,11 @@
 	var raspolozivo = parseInt(document.getElementById("novac2").value);
 	var procenat = parseInt(document.getElementById("procenat").value);
 
-	var novo = raspolozivo + (zaduzenje * (procenat/100));
-	
+	var zaduzenje2 = (zaduzenje - (zaduzenje * (procenat/100)));
+	var kamata = zaduzenje2 * ((20/100) / 12);
+
+	var novo = raspolozivo - zaduzenje2 - kamata;
+			
 	document.getElementById("novac3").value = novo;
 }
 	</script>
