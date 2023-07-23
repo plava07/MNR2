@@ -8,18 +8,66 @@
 <body>
 	<h1>Obračun poreza po modelima</h1>
 
-		<div class="container">
-			<h3>Plata 1: <input type = "text" id = "novac1" class="form-control"> € </h3> <br>
-			<h3>Plata 2: <input type = "text" id = "novac2" class="form-control"> € </h3> <br>
-			<h3>Plata 3: <input type = "text" id = "novac3" class="form-control"> € </h3> <br>
-			<h3>Porez po modelu A: <input type = "text" id = "iznos1" class="form-control"> RSD </h3> <br>
+	 <article> 
+                       
+                <p>Frilenser (engl. freelancer) je osoba koja obavlja posao ili pruža usluge za druge pojedince, kompanije ili organizacije, ali radi kao nezavisni profesionalac, van formalnog radnog odnosa. To znači da frilenser nije stalno zaposlen u jednoj firmi, već radi samostalno, sam organizuje svoje radno vreme i bira projekte na kojima želi da radi. <br>Ovaj vid zaposlenja je postal veoma popularan u digitalnoj eri, gde internet omogućava saradnju sa klijentima širom sveta.
+                </p>
 
-			<input type="button" value="Izračunaj" onclick="KalkulatorPorezaA()">
+                <p>Prednosti frilenserskog rada uključuju fleksibilnost u izboru poslova i radnog vremena, mogućnost rada od kuće ili bilo koje lokacije sa internetom, kao i mogućnost da se angažuje na raznovrsnim projektima i stekne iskustvo u više oblasti. <br>Međutim, frilenserski rad može biti nesiguran jer frilenser mora samostalno tražiti klijente i projekte, i nije uvek zagarantovano da će imati kontinuiranu zaposlenost ili prihod.
+               </p>   
 
-			<h3>Porez po modelu B: <input type = "text" id = "iznos2" class="form-control"> RSD </h3> <br>
+                <p>Novim zakonom, koji stupa na snagu u 2024. godini, je predviđeno da frilenseri imaju mogućnost da porez na svoje prihode plaćaju po dva modela, tj mogu da biraju za koji će se od ta dva modela opredeliti. Modeli mogu da se menjaju kvartalno.<br><br> Model A funkcioniše po sledećem principu:
+                    <ul> 
+                        <li>od tromesečnih prihoda oduzima se 96 000 dinara takozvanih normiranih troškova</li>
+						<li>na tako dobijenu razliku plaća se porez po stopi od 20%.</li>
+					</ul> 
 
-			<input type="button" value="Izračunaj" onclick="KalkulatorPorezaB()">
+                    <p>A ovako se računa porez na prihode po modelu B:</p>
 
+                    <ul> 
+                        <li>od tromesečnih prihoda oduzimaju se normiranih troškovi od 57 900 dinara</li>
+                        <li>oduzima se još i 34% ostvarenih prihoda</li>
+                         <li>na tako dobijenu razliku plaća se porez po stopi od 10%.</li>
+
+                    </ul>
+                     
+                    <p>Pogledajmo na primeru kako se računa porez na zaradu po oba modela. <br>Pretpostavimo da ste odlučili da se bavite grafičkim dizajnom kao frilenser i svoje usluge naplaćujete u evrima, jer radite za klijente širom sveta. Kako svoju zaradu ostvarujete u Srbiji, morate da na tu zaradu platite porez po jednom od gore pomenutih modela. U januaru ste zaradili 520 evra, u februaru 680, a u martu 750 evra. U aprilu bi trebalo da platite porez po jednom od ponuđenih modela. Koji model je povoljniji?
+                    <br><br>Prema modelu A:
+                    <ul> 
+                        <li>Ukupni tromesečni prihod: 520 + 680 + 750 = 1950 evra</li>
+                        <li>Od tog prihoda oduzmimo normirane troškove: 1950 evra - 96,000 dinara (96,000 dinara ~ 818.18 evra)</li>
+                        <li>Dobijemo razliku: 1950 evra - 818.18 evra = 1131.82 evra</li>
+                        <li>Porez = 20% od razlike = 20% * 1131.82 evra = 226.36 evra</li>
+                    </ul>
+                    Na osnovu modela B računica izgleda ovako:
+                     <ul> 
+                        <li>Ukupni tromesečni prihod: 520 + 680 + 750 = 1950 evra</li>
+                        <li>Oduzmimo normirane troškove: 1950 evra - 57,900 dinara (57,900 dinara ~ 493.63 evra)</li>
+                        <li>Oduzmimo 34% ostvarenih prihoda: 1950 evra - (34% od 1950 evra) = 1950 evra - 663 evra = 1287 evra</li>
+                        <li>Dobijemo razliku: 1287 evra - 493.63 evra = 793.37 evra</li>
+                        <li>Porez = 10% od razlike = 10% * 793.37 evra = 79.34 evra</li>
+                    </ul>
+
+                    Na osnovu ispravnih izračuna, vidimo da je porez po modelu B (79.34 evra) manji od poreza po modelu A (226.36 evra) za tromesečni period. Dakle, model B je u ovom slučaju povoljniji za obračun poreza.
+
+                <br> <br>
+
+            </article>  
+
+			<div style="border: 2px solid black; display: inline-block; padding: 10px;">
+    <div class="container">
+        <h3>Plata 1: <input type="text" id="novac1" class="form-control"> € </h3> <br>
+        <h3>Plata 2: <input type="text" id="novac2" class="form-control"> € </h3> <br>
+        <h3>Plata 3: <input type="text" id="novac3" class="form-control"> € </h3> <br>
+        <h3>Porez po modelu A: <input type="text" id="iznos1" class="form-control"> RSD </h3> <br>
+
+        <input type="button" value="Izračunaj" onclick="KalkulatorPorezaA()">
+
+        <h3>Porez po modelu B: <input type="text" id="iznos2" class="form-control"> RSD </h3> <br>
+
+        <input type="button" value="Izračunaj" onclick="KalkulatorPorezaB()">
+    </div>
+</div>
 
 	<script>
 		function KalkulatorPorezaA() {
