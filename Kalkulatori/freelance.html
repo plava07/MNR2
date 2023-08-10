@@ -4,6 +4,43 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Obračun poreza po modelima</title>
+
+		<style>
+         body {
+            background-color: dodgerblue;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center; 
+            margin-bottom: 20px; /* Margina ispod naslova */
+        }
+
+        article {
+            max-width: 800px; 
+            margin: 0 auto; /* Centriranje article */
+            padding: 20px;
+            background-color: rgba(0, 0, 255, 0.8);
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+    </style>
+	
 </head>
 <body>
 	<h1>Obračun poreza po modelima</h1>
@@ -53,6 +90,7 @@
 		 <br>S obzirom da je zvanična valuta Srbije RSD, porez ne plaćate u evrima, nego u dinarima, te je potrebno iznose i konvertovati iz evra u dinare. Ukoliko ste zaboravili kako se to radi, ponovo pogledajte kalkulator <a href="valute3.html">konverzije valuta</a>.</p> 
 
             </article>  
+	<br><br>
 
 			<div style="border: 2px solid black; display: inline-block; padding: 10px;">
     <div class="container">
@@ -74,6 +112,8 @@
         	<button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: #0000FF; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer;">Vrati se nazad</button>
 
 		</div> 
+
+	<br><br>
 
 	<script>
 		function KalkulatorPorezaA() {
