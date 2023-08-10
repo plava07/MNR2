@@ -41,42 +41,6 @@
             line-height: 1.5;
         }
 
-        .container {
-         border: 2px solid whitesmoke; 
-        display: block;
-        margin: auto; 
-        padding: 10px;
-        }
-
-        /* Stil za veće ekrane */
-@media only screen and (min-width: 768px) {
-    h1 {
-        font-size: 28px;
-    }
-}
-
-/* Stil za manje ekrane (mobilni telefoni, tableti itd.) */
-@media only screen and (max-width: 767px) {
-    h1 {
-        font-size: 18px;
-    }
-    article {
-        max-width: 80%;
-        margin: 0 auto;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    .container {
-        padding: 5px; /* Smanji padding za manje ekrane */
-    }
-    .container button {
-        background-color: #0000FF;
-        color: white;
-        float: left;
-        margin-right: 10px;
-    }
-}
-
     </style>
 	
 </head>
@@ -142,6 +106,7 @@
 
 	<br><br>
 
+	<div style="border: 2px solid whitesmoke; display: inline-block; padding: 10px;">
 		<div class="container">
 			<h3>Plata: <input type = "text" id = "novac1" class="form-control"> € </h3> <br>
 			<h3>Procenat: <input type = "text" id = "procenat" class="form-control"> % </h3> <br>
@@ -153,6 +118,7 @@
 
 			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeDinar()" style="background-color: #0000FF; color: white; float: right;">
 		   </div>
+	 </div>
 	<br><br>
 
 		<div class="container">
