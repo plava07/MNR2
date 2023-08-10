@@ -53,28 +53,33 @@
         margin-right: 10px; 
         }
 
+        /* Stil za veće ekrane */
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+}
 
-
-        /* Stil za manje ekrane (mobilni telefoni, tableti itd.) */
-        @media only screen and (max-width: 767px) {
+/* Stil za manje ekrane (mobilni telefoni, tableti itd.) */
+@media only screen and (max-width: 767px) {
     h1 {
         font-size: 18px;
     }
     article {
-        max-width: 85%;
+        max-width: 90%;
         margin: 0 auto;
         padding: 10px;
         border-radius: 5px;
     }
     .container {
-        max-width: 85%;
-        padding: 5px;
+        padding: 5px; /* Smanji padding za manje ekrane */
     }
-
-    .container button{
-        max-width: 85%;
-        padding: 5px;
-        }
+    .container button {
+        background-color: #0000FF;
+        color: white;
+        float: left;
+        margin-right: 10px;
+    }
 }
 
     </style>
