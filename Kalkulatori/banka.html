@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	     body {
+	<style>
+         body {
             background-color: dodgerblue;
             color: white;
             margin: 0;
@@ -20,12 +21,12 @@
         h1 {
             font-size: 24px;
             text-align: center; 
-            margin-bottom: 20px; /* Margina ispod naslova */
+            margin-bottom: 20px;
         }
 
         article {
             max-width: 800px; 
-            margin: 0 auto; /* Centriranje article */
+            margin: 0 auto;
             padding: 20px;
             background-color: LightCyan;
             color: dodgerblue;
@@ -40,23 +41,19 @@
 
         .container {
          border: 2px solid whitesmoke; 
-        display: block; /* Promenjeno u block da bi se dodao margin:auto */
-        margin: auto; /* Dodat stil za centriranje */
+        display: block;
+        margin: auto; 
         padding: 10px;
         }
 
         .container button {
-            background-color: #0000FF;
-            color: white;
-            float: right;
-            }
-
-        /* Stil za veće ekrane */
-        @media only screen and (min-width: 768px) {
-            h1 {
-                font-size: 28px;
-            }
+        background-color: #0000FF;
+        color: white;
+        float: left; 
+        margin-right: 10px; 
         }
+
+
 
         /* Stil za manje ekrane (mobilni telefoni, tableti itd.) */
         @media only screen and (max-width: 767px) {
@@ -64,15 +61,20 @@
         font-size: 18px;
     }
     article {
-        max-width: 90%;
+        max-width: 85%;
         margin: 0 auto;
         padding: 10px;
         border-radius: 5px;
     }
     .container {
-        max-width: 90%; /* Dodajte ovu liniju za smanjenje širine kontejnera */
-        padding: 5px; /* Smanjen padding za bolje prikazivanje na manjim ekranima */
+        max-width: 85%;
+        padding: 5px;
     }
+
+    .container button{
+        max-width: 85%;
+        padding: 5px;
+        }
 }
 
     </style>
