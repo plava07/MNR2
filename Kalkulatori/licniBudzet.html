@@ -3,6 +3,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kalkulator - lični budžet</title>
+
+	<style>
+         body {
+            background-color: dodgerblue;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center; 
+            margin-bottom: 20px; /* Margina ispod naslova */
+        }
+
+        article {
+            max-width: 800px; 
+            margin: 0 auto; /* Centriranje article */
+            padding: 20px;
+            background-color: rgba(0, 0, 255, 0.8);
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+    </style>
+	
 </head>
 <body>
 <div id="app">
@@ -37,11 +74,11 @@
 
                 <p>Sada kada imate svoj lični budžet, možete ga analizirati kako biste videli kako trošite novac. Da li primećujete nešto što biste mogli da promenite ili poboljšate? Možda biste mogli da smanjite troškove za zabavu ili da povećate štednju. Analiza budžeta pomaže vam da donesete bolje finansijske odluke. <br><br> Korišćenjem osnovnih operacija sabiranja i oduzimanja, možete pratiti svoje prihode, rashode i planirati kako da bolje upravljate svojim novcem. Ako želite da uštedite novac za putovanje ili za nešto posebno, možete koristiti budžet da biste odredili koliko novca treba da štedite svakog meseca kako biste postigli svoje ciljeve.</p> 
 
-                <br>
-
             </article>
 
-    <div style="border: 2px solid black; display: inline-block; padding: 10px;">
+	<br><br>
+
+    <div style="border: 2px solid white; display: inline-block; padding: 10px;">
     <table>
         <table class="kolone">
             <thead>
@@ -75,9 +112,11 @@
         </h3>
 
         <h3><input type="text" id="novac2" class="form-control"> RSD</h3>
-        <input type="button" value="Ukupno" onclick="Ukupno()">
+        <input type="button" value="Ukupno" onclick="Ukupno()" style="background-color: #0000FF; color: white; float: right;">
 
     </table>
+
+	    <br><br>
 </div>
 <script>
 
