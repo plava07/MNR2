@@ -3,44 +3,53 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<style>
-        body {
+
+	     body {
             background-color: dodgerblue;
             color: white;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            font-family: Arial, sans-serif;
         }
 
         h1 {
             font-size: 24px;
             text-align: center; 
-            margin-bottom: 20px;
+            margin-bottom: 20px; /* Margina ispod naslova */
         }
 
         article {
             max-width: 800px; 
-            margin: 0 auto;
+            margin: 0 auto; /* Centriranje article */
             padding: 20px;
             background-color: LightCyan;
+            color: dodgerblue;
             border-radius: 10px;
             text-align: left;
-            color: dodgerblue;
         }
 
         p {
             font-size: 18px;
             line-height: 1.5;
         }
+
+        .container {
+         border: 2px solid whitesmoke; 
+        display: block; /* Promenjeno u block da bi se dodao margin:auto */
+        margin: auto; /* Dodat stil za centriranje */
+        padding: 10px;
+        }
+
+        .container button {
+            background-color: #0000FF;
+            color: white;
+            float: right;
+            }
 
         /* Stil za veće ekrane */
         @media only screen and (min-width: 768px) {
@@ -51,16 +60,21 @@
 
         /* Stil za manje ekrane (mobilni telefoni, tableti itd.) */
         @media only screen and (max-width: 767px) {
-            h1 {
-                font-size: 18px;
-            }
-            article {
-                max-width: 90%; /* Smanji širinu članka za manje ekrane */
-                margin: 0 auto;
-                padding: 10px; /* Manji padding za bolje prikazivanje na manjim ekranima */
-                border-radius: 5px;
-            }
-        }
+    h1 {
+        font-size: 18px;
+    }
+    article {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .container {
+        max-width: 90%; /* Dodajte ovu liniju za smanjenje širine kontejnera */
+        padding: 5px; /* Smanjen padding za bolje prikazivanje na manjim ekranima */
+    }
+}
+
     </style>
 	
 </head>
