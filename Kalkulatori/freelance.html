@@ -5,43 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Obračun poreza po modelima</title>
 
-		<style>
-         body {
-            background-color: dodgerblue;
-            color: white;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-
-        h1 {
-            font-size: 24px;
-            text-align: center; 
-            margin-bottom: 20px; /* Margina ispod naslova */
-        }
-
-        article {
-            max-width: 800px; 
-            margin: 0 auto; /* Centriranje article */
-            padding: 20px;
-            border-radius: 10px;
-            text-align: left;
-	    background-color: LightCyan;
-            color: dodgerblue;
-
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.5;
-        }
-			
-    </style>
+	<style type="text/css">
+		body {   
+		    font-family: Arial;         
+			background-color: #f0f0f0;
+		    }   
+		header {                       
+			text-align: center;
+			}
+		main {                         
+			background-color: white;     
+			width: 800px;
+			margin: auto;
+			padding: 20px; 
+			border: 1px solid grey;
+			box-shadow: 10px 10px 5px #888888;
+			border-radius: 10px;
+			}  
+	</style>
 	
 </head>
 <body>
@@ -117,7 +98,7 @@
 	<br><br>
 
 	<script>
-		function KalkulatorPorezaA() {
+	function KalkulatorPorezaA() {
 	var plata1 = parseInt(document.getElementById("novac1").value);
 	var plata2 = parseInt(document.getElementById("novac2").value);
 	var plata3 = parseInt(document.getElementById("novac3").value);
@@ -127,7 +108,7 @@
 	document.getElementById("iznos1").value = novoA;
 }
 
-		function KalkulatorPorezaB() {
+	function KalkulatorPorezaB() {
 	var plata1 = parseInt(document.getElementById("novac1").value);
 	var plata2 = parseInt(document.getElementById("novac2").value);
 	var plata3 = parseInt(document.getElementById("novac3").value);
