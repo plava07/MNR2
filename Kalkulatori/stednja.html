@@ -20,7 +20,26 @@
 			border: 1px solid grey;
 			box-shadow: 10px 10px 5px #888888;
 			border-radius: 10px;
-			}  
+			}
+
+		input[type=text] {
+        width: 70%;
+        padding: 10px 15px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc; /* Dodajte ovaj red */
+        border-radius: 4px;
+    }
+
+        input[type=button] {
+             background-color: #0000FF;
+             color: white;
+             float: right;
+             margin-left: 10px;
+             font-size: 15px;
+             height: 45px; /
+            }
+		
 	</style>
 	
 </head>
@@ -84,12 +103,19 @@
 	<div style="text-align: center;">
         <div style="border: 2px solid blue; display: inline-block; padding: 10px; margin: 0 auto;">
             <div class="container">
-			<h3>Ušteđevina: <input type = "text" id = "novac1"> RSD</h3> <br>
-			<h3>Cena željenog artikla: <input type = "text" id = "novac2"> RSD</h3> <br>
-			<h3>Mesečno štedim: <input type = "text" id = "novac3"> RSD</h3> <br>
-			<h3>Koliko meseci do cilja? <input type = "text" id = "mesec"> </h3> <br>
+			<h3>Ušteđevina</h3>
+		    	<input type = "text" id = "novac1"> RSD <br>
+			
+		    	<h3>Cena željenog artikla</h3>
+		    	<input type = "text" id = "novac2"> RSD<br>
+			
+		    	<h3>Mesečno štedim</h3>
+		    	<input type = "text" id = "novac3"> RSD<br>
+		    
+			<h3>Koliko meseci do cilja?</h3>
+		    	<input type = "text" id = "mesec"> <br>
 
-			<button onclick="KalkulatorStednje()" style="background-color: #0000FF; color: white; float: right;">Izračunaj</button>
+			<button onclick="KalkulatorStednje()">
 		</div>
 	      </div>
 	</div>
