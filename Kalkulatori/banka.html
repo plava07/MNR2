@@ -20,7 +20,25 @@
 			border: 1px solid grey;
 			box-shadow: 10px 10px 5px #888888;
 			border-radius: 10px;
-			}  
+			} 
+
+		input[type=text] {
+      				 width: 70%;
+        			 padding: 10px 15px;
+       				 margin: 8px 0;
+       				 box-sizing: border-box;
+       				 border: 2px solid #ccc; /* Dodajte ovaj red */
+        			 border-radius: 4px;
+    				}
+
+       		input[type=button] {
+            		background-color: #0000FF;
+           		color: white;
+          		float: right;
+        		margin-left: 10px;
+            		font-size: 15px;
+             		height: 45px; /
+            		}
 	</style>
 	
 </head>
@@ -64,12 +82,19 @@
   <div style="text-align: center;">
         <div style="border: 2px solid blue; display: inline-block; padding: 10px; margin: 0 auto;">
             <div class="container">
-			<h3>Glavnica: <input type = "text" id = "novac1" class="form-control"> RSD </h3> <br>
-			<h3>Kamata: <input type = "text" id = "procenat" class="form-control"> % </h3> <br>
-			<h3>Broj meseci: <input type = "text" id = "mesec" class="form-control"> </h3> <br>
-			<h3>Zarada: <input type = "text" id = "novac2" class="form-control"> RSD </h3> <br>
+			<h3>Glavnica</h3>
+		    	<input type = "text" id = "novac1" class="form-control"> RSD </h3> <br>
+		    
+			<h3>Kamata</h3>
+		    	<input type = "text" id = "procenat" class="form-control"> % </h3> <br>
+			
+		    	<h3>Broj meseci</h3>
+		    	<input type = "text" id = "mesec" class="form-control"> </h3> <br>
+		    
+			<h3>Zarada</h3>
+		    	<input type = "text" id = "novac2" class="form-control"> RSD </h3> <br>
 
-			<input type="button" value="Izračunaj" onclick="KalkulatorStednje2()" style="background-color: #0000FF; color: white; float: right;">
+			<input type="button" value="Izračunaj" onclick="KalkulatorStednje2()">
 
 		 </div>
 	 	</div>
