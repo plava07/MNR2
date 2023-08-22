@@ -21,7 +21,25 @@
 			border: 1px solid grey;
 			box-shadow: 10px 10px 5px #888888;
 			border-radius: 10px;
-			}  
+			}
+		input[type=text] {
+        width: 70%;
+        padding: 10px 15px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc; /* Dodajte ovaj red */
+        border-radius: 4px;
+    }
+
+        input[type=button] {
+             background-color: #0000FF;
+             color: white;
+             float: right;
+             margin-left: 10px;
+             font-size: 15px;
+             height: 45px; /
+            }
+		
 	</style>
 	
 </head>
@@ -95,15 +113,21 @@
 	 <div style="text-align: center;">
          <div style="border: 2px solid blue; display: inline-block; padding: 10px; margin: 0 auto;">
             <div class="container">
-			<h3>Plata: <input type = "text" id = "novac1" class="form-control"> € </h3> <br>
-			<h3>Procenat: <input type = "text" id = "procenat" class="form-control"> % </h3> <br>
-			<h3>Nova plata u evrima: <input type = "text" id = "novac2" class="form-control"> </h3> <br>
+			<h3>Plata</h3>
+		    	<input type = "text" id = "novac1" class="form-control"> € <br>
+		    
+			<h3>Procenat</h3>
+		    	<input type = "text" id = "procenat" class="form-control"> %<br>
+		    
+			<h3>Nova plata u evrima</h3> 
+		    	<input type = "text" id = "novac2" class="form-control"><br>
 
-			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeEvro()" style="background-color: #0000FF; color: white; float: right;">
+			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeEvro()">
 
-			<h3>Nova plata u dinarima: <input type = "text" id = "novac3" class="form-control"> </h3> <br>
+			<h3>Nova plata u dinarima</h3>
+		    	<input type = "text" id = "novac3" class="form-control"><br>
 
-			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeDinar()" style="background-color: #0000FF; color: white; float: right;">
+			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeDinar()">
 		   </div>
 		 </div>
 	 </div>
