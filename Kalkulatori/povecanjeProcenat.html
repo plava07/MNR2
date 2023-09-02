@@ -6,50 +6,89 @@
 
 		<style type="text/css">
 		body {   
-		    font-family: Arial;         
-			background-color: #f0f0f0;
-		    }   
-		header {                       
-			text-align: center;
-			}
-		main {                         
-			background-color: white;     
-			width: 800px;
-			margin: auto;
-			padding: 20px; 
-			border: 1px solid grey;
-			box-shadow: 10px 10px 5px #888888;
-			border-radius: 10px;
-			} 
+            font-family: Arial;         
+            background-color: #f0f0f0;
+            }   
+        header {                       
+            text-align: center;
+            }
+        main {                         
+            background-color: white;     
+            width: 800px;
+            margin: auto;
+            padding: 20px; 
+            border: 1px solid grey;
+            box-shadow: 10px 10px 5px #888888;
+            border-radius: 10px;
+            }
+        
+            .calc {
 
- .container {
-    background-color: #fff;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-        border-radius: 5px;
-    box-shadow: 0 0 10px #888888;
-}
+                margin: 10px auto;
+                padding: 8px;
+               /* border: 2px solid blue;*/
+                width: 70%;
+                overflow: auto;
+                box-shadow: 0 0 10px #888888;
+            }
 
- input[type=text] {
-        width: 80%;
-        padding: 10px 15px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-    }
+            .calc input[type=text] {
+                width: 94%;
+                padding: 10px 15px;
+                margin: 0px auto;
+                display: block;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+            }
 
-  button {
-             background-color: #0000FF;
-             color: white;
-             float: left;
-             font-size: 15px;
-             height: 45px;
-             width: 20%;
-            padding: 10px 15px;
-            margin: -10px 0 0 0; 
-            border-radius: 4px;
+            .calc h3 {
+
+                font-size: 18px;
+                font-weight: bold;
+                margin: 12px 0 4px 0;
+            }
+
+            .calc input[type=button] {
+
+                background-color: blue;
+                color: white;
+                float: right;
+                font-size: 16px;
+                height: 45px;
+                width: 30%;
+                padding: 10px 15px;
+                border-radius: 4px;
+                margin-top: 12px;
+                border: 2px solid blue;
+                cursor: pointer;
+            }
+            
+            .calc input[type=button]:hover{
+
+                background-color: white;
+                color: blue;
+            }
+
+            button {
+                position: fixed; 
+                bottom: 35px; 
+                right: 20px; 
+                z-index: 9999; 
+                background-color: blue; 
+                color: white; 
+                padding: 10px 15px; 
+                font-size: 16px; 
+                border: 2px solid blue; 
+                cursor: pointer; 
+                width: 200px;
+                border-radius: 4px;
+                border: 2px solid blue;
+            }
+
+            button:hover{
+
+                background-color: white;
+                color: blue;
             }
 
 	</style>
@@ -119,51 +158,30 @@
 
             </article>  
 
-	<br><br>
-
-
-            <div class="container" style="overflow: auto;">
-			<h3>Plata </h3>
-		    	<input type = "text" id = "novac1" class="form-control"> € <br>
+        <div class="calc">
+			<h3>Plata (EUR) </h3>
+            <input type = "text" id = "novac1" class="form-control">
 		    
-			<h3>Procenat</h3>
-		    	<input type = "text" id = "procenat" class="form-control"> %<br>
+			<h3>Procenat (%)</h3>
+            <input type = "text" id = "procenat" class="form-control">
 		    
 			<h3>Nova plata u evrima</h3> 
-		    	<input type = "text" id = "novac2" class="form-control"> <br><br>
+            <input type = "text" id = "novac2" class="form-control">
+			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeEvro()">
 
-			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeEvro()" style="background-color: deepskyblue;
-             color: white;
-             float: left;
-             font-size: 15px;
-             height: 45px;
-             width: 40%;
-            padding: 10px 15px;
-            margin: -10px 0 0 0; 
-           border: 2px solid #ccc; border-radius: 4px;"> <br><br>
+            <div style="clear:both"></div>
 
 			<h3>Nova plata u dinarima</h3>
-		    	<input type = "text" id = "novac3" class="form-control"> <br><br>
+            <input type = "text" id = "novac3" class="form-control">
 
-			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeDinar()" style="background-color: deepskyblue;
-             color: white;
-             float: left;
-             font-size: 15px;
-             height: 45px;
-             width: 40%;
-            padding: 10px 15px;
-            margin: -10px 0 0 0; 
-            border: 2px solid #ccc; border-radius: 4px;">
+			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeDinar()" >
 	 </div>
 	<br>
 
 	</main>
+    
+    <button onclick="window.location.href='../index.html'">Vrati se nazad</button>
 
-		<div class="container">
-
-        	<button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: deepskyblue; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; width: 200px;">Vrati se nazad</button>
-
-		</div> 
 
 	<script>
 		function KalkulatorPovecanjeEvro() {
