@@ -22,36 +22,35 @@
 			border-radius: 10px;
 			} 
 
-		.container {
-    			background-color: #fff;
-    			max-width: 400px;
-    			margin: 0 auto;
-    			padding: 20px;
-    			border-radius: 5px;
-    			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			}
-			
-		 input[type=text] {
-     			width: 80%;
-       			padding: 10px 15px;
-       			margin: 8px 0;
-     			box-sizing: border-box;
-		        border: 2px solid #ccc;
-     			border-radius: 4px;
-		    	}
+ .container {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+        border-radius: 5px;
+    box-shadow: 0 0 10px #888888;
+}
 
- 	 	button {
-             		background-color: #0000FF;
-             		color: white;
-             		float: left;
-             		font-size: 15px;
-             		height: 45px;
-             		width: 20%;
-            		padding: 10px 15px;
-            		margin: -10px 0 0 0; 
-            		border-radius: 4px;
-            		}
+ input[type=text] {
+        width: 80%;
+        padding: 10px 15px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+    }
 
+  button {
+             background-color: #0000FF;
+             color: white;
+             float: left;
+             font-size: 15px;
+             height: 45px;
+             width: 20%;
+            padding: 10px 15px;
+            margin: -10px 0 0 0; 
+            border-radius: 4px;
+            }
 
 	</style>
 </head>
@@ -122,22 +121,39 @@
 
 	<br><br>
 
-            <div class="container">
-			<h3>Plata</h3>
+
+            <div class="container" style="overflow: auto;">
+			<h3>Plata </h3>
 		    	<input type = "text" id = "novac1" class="form-control"> € <br>
 		    
 			<h3>Procenat</h3>
-		    	<input type = "text" id = "procenat" class="form-control"> % <br>
+		    	<input type = "text" id = "procenat" class="form-control"> %<br>
 		    
 			<h3>Nova plata u evrima</h3> 
-		    	<input type = "text" id = "novac2" class="form-control"> <br>
+		    	<input type = "text" id = "novac2" class="form-control"> <br><br>
 
-			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeEvro()">
+			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeEvro()" style="width: 100px; background-color: deepskyblue;
+             color: white;
+             float: left;
+             font-size: 15px;
+             height: 45px;
+             width: 40%;
+            padding: 10px 15px;
+            margin: -10px 0 0 0; 
+           border: 2px solid #ccc; border-radius: 4px;"> <br><br>
 
 			<h3>Nova plata u dinarima</h3>
-		    	<input type = "text" id = "novac3" class="form-control"> <br>
+		    	<input type = "text" id = "novac3" class="form-control"> <br><br>
 
-			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeDinar()">
+			<input type="button" value="Izračunaj" onclick="KalkulatorPovecanjeDinar()" style="width: 100px; background-color: deepskyblue;
+             color: white;
+             float: left;
+             font-size: 15px;
+             height: 45px;
+             width: 40%;
+            padding: 10px 15px;
+            margin: -10px 0 0 0; 
+            border: 2px solid #ccc; border-radius: 4px;">
 	 </div>
 	<br>
 
@@ -145,7 +161,7 @@
 
 		<div class="container">
 
-        	<button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: #0000FF; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer;">Vrati se nazad</button>
+        	<button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: deepskyblue; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; width: 200px;">Vrati se nazad</button>
 
 		</div> 
 
