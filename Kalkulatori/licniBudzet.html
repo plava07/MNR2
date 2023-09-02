@@ -21,6 +21,55 @@
 			box-shadow: 10px 10px 5px #888888;
 			border-radius: 10px;
 			}  
+
+		.container {
+    			background-color: #fff;
+    			max-width: 400px;
+    			margin: 0 auto;
+    			padding: 20px;
+    			border-radius: 5px;
+    			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			}
+			
+		 input[type=text] {
+     			width: 80%;
+       			padding: 10px 15px;
+       			margin: 8px 0;
+     			box-sizing: border-box;
+		        border: 2px solid #ccc;
+     			border-radius: 4px;
+		    	}
+
+		     input[type=number] {
+       			width: 60%;
+      			padding: 10px 15px;
+        		margin: 8px 0;
+        		box-sizing: border-box;
+        		border: 2px solid #ccc;
+        		border-radius: 4px;
+    			}
+
+     		  select {
+        		width: 60%;
+        		padding: 10px 15px;
+        		margin: 8px 0;
+        		box-sizing: border-box;
+        		border: 2px solid #ccc;
+        		border-radius: 4px;
+    			}
+
+
+ 	 	button {
+             		background-color: #0000FF;
+             		color: white;
+             		float: left;
+             		font-size: 15px;
+             		height: 45px;
+             		width: 20%;
+            		padding: 10px 15px;
+            		margin: -10px 0 0 0; 
+            		border-radius: 4px;
+            		}
 	</style>
 	
 </head>
@@ -66,14 +115,14 @@
 
 	<br><br>
 
- <div style="border: 2px solid blue; display: inline-block; padding: 10px; margin: 0 auto;">
+ <div class="container">
     <table>
         <table class="kolone">
             <thead>
             <tr>
                 <th>Opis</th>
                 <th>Tip</th>
-                <th>Iznos</th>
+                <th>Iznos (RSD)</th>
                 <th></th>
             </tr>
             </thead>
@@ -90,18 +139,25 @@
                     </select>
                 </td>
                 <td>
-                    <input type="number" class="input input-amount" id="novac1"> RSD
+                    <input type="number" class="input input-amount" id="novac1">
                 </td>
             </tr>
             </tbody>
         </table>
         <h3>
-            <input type="button" value="Novi unos" onclick="noviUnos()" style="background-color: #0000FF; color: white; float: left;">
+            <input type="button" value="Novi unos" onclick="noviUnos()">
+		<input type="button" value="Ukupno" onclick="Ukupno()" style= "float: right;">
 		<br><br>
         </h3>
 
-        <h3><input type="text" id="novac2" class="form-control"> RSD</h3>
-        <input type="button" value="Ukupno" onclick="Ukupno()" style="background-color: #0000FF; color: white; float: right;">
+	      <thead>
+            <tr>
+                <th>Saldo (RSD)</th>
+                <th></th>
+            </tr>
+            </thead>
+
+        <h3><input type="text" id="novac2" class="form-control"></h3>
 
     </table>
  </div>
