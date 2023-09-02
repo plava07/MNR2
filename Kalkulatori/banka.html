@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<style type="text/css">
-		body {   
-		    font-family: Arial;         
-			background-color: #f0f0f0;
-		    }   
-		header {                       
-			text-align: center;
-			}
-		main {                         
-			background-color: white;     
-			width: 800px;
-			margin: auto;
-			padding: 20px; 
-			border: 1px solid grey;
-			box-shadow: 10px 10px 5px #888888;
-			border-radius: 10px;
-			}
+        <style type="text/css">
+        body {   
+            font-family: Arial;         
+            background-color: #f0f0f0;
+            }   
+        header {                       
+            text-align: center;
+            }
+        main {                         
+            background-color: white;     
+            width: 800px;
+            margin: auto;
+            padding: 20px; 
+            border: 1px solid grey;
+            box-shadow: 10px 10px 5px #888888;
+            border-radius: 10px;
+            }
+            
+            .container {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #888888;
+            }
 
-		 .container {
-    			background-color: #fff;
-    			max-width: 400px;
-    			margin: 0 auto;
-    			padding: 20px;
-    			border-radius: 5px;
-    			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			}
-			
-		 input[type=text] {
-     			width: 80%;
-       			padding: 10px 15px;
-       			margin: 8px 0;
-     			box-sizing: border-box;
-		        border: 2px solid #ccc;
-     			border-radius: 4px;
-		    	}
+        input[type=text] {
+            width: 80%;
+            padding: 10px 15px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            }
 
- 	 	button {
-             		background-color: #0000FF;
-             		color: white;
-             		float: left;
-             		font-size: 15px;
-             		height: 45px;
-             		width: 20%;
-            		padding: 10px 15px;
-            		margin: -10px 0 0 0; 
-            		border-radius: 4px;
-            		}
-			
-	</style>
-	
+        button {
+            background-color: skyblue;
+            color: white;
+            float: left;
+            font-size: 15px;
+            height: 45px;
+            width: 40%;
+            padding: 10px 15px;
+            margin: -10px 0 0 0; 
+            border-radius: 4px;
+            }
+
+    </style>
+    
 </head>
 <body>
-	<header>    
-		<img src="../Images/fp.jpeg" alt="Finansijska pismenost" width="250px" />
-	</header> 
+    <header>    
+        <img src="../Images/fp.jpeg" alt="Finansijska pismenost" width="250px" />
+    </header> 
 
 <main>  
 
-	<h1 style="text-align: center;">Kalkulator - štednja u banci</h1>
+    <h1 style="text-align: center;">Kalkulator - štednja u banci</h1>
 
-	  <article> 
+      <article> 
                        
                 <p>Štednja u banci je finansijska praksa u kojoj pojedinac <b>oroči</b> svoj novac u banci kako bi ga sačuvao i zaradio na kamatama tokom određenog perioda. Da biste počeli sa štednjom u banci, potrebno je da prvo otvorite štedni račun. Ovo možete uraditi u filijali banke ili često i online putem internet bankarstva.
                 <br>Štedni računi mogu biti oročeni ili nenoročeni. <b>Oročeni štedni računi</b> podrazumevaju da novac ne možete podići pre isteka određenog perioda (npr. 3 meseca, 6 meseci, 1 godina). Uz oročenje, banka vam obično nudi veću kamatnu stopu kako bi vas ohrabrila da novac ostavite duže na računu. <b>Nenoročeni štedni računi</b> omogućavaju vam da podižete novac kad god želite.
@@ -81,7 +81,7 @@
                 <br>Da bismo izračunali krajnji iznos koji ćete dobiti nakon 12 meseci, koristićemo formulu za kamatno obračunavanje:
                     <ul> 
                         <li>Krajnji iznos = Početna glavnica x (1 + (Kamatna stopa / 100) x (Broj meseci / 12)) <br> Krajnji iznos = 800 evra x (1 + (0,025 / 100) x (12 / 12))</li>
-					</ul> 
+                    </ul> 
 
                     <p>Nakon 12 meseci oročenja, imaćete 820 evra na svom štednom računu. Razlika od 20 evra je kamata koju ste zaradili tokom 12 meseci.<br></p>
 
@@ -89,43 +89,52 @@
 
             </article>  
 
-	<br><br>
+    <br><br>
 
-	
-            <div class="container">
-			<h3>Glavnica</h3>
-		    	<input type = "text" id = "novac1" class="form-control"> RSD </h3> <br>
-		    
-			<h3>Kamata</h3>
-		    	<input type = "text" id = "procenat" class="form-control"> % </h3> <br>
-			
-		    	<h3>Broj meseci</h3>
-		    	<input type = "text" id = "mesec" class="form-control"> </h3> <br>
-		    
-			<h3>Zarada</h3>
-		    	<input type = "text" id = "novac2" class="form-control"> RSD </h3> <br>
+            <div class="container" style="overflow: auto;">
+            <h3>Glavnica</h3>
+                <input type = "text" id = "novac1" class="form-control"> </h3> RSD <br>
+            
+            <h3>Kamata</h3>
+                <input type = "text" id = "procenat" class="form-control"> </h3> % <br>
+            
+                <h3>Broj meseci</h3>
+                <input type = "text" id = "mesec" class="form-control"> </h3> <br>
+            
+            <h3>Zarada</h3>
+                <input type = "text" id = "novac2" class="form-control">  </h3> RSD<br><br>
 
-			<input type="button" value="Izračunaj" onclick="KalkulatorStednje2()">
-	</div> 
+            <input type="button" value="Izračunaj" onclick="KalkulatorStednje2()" style="width: 100px; background-color: deepskyblue;
+             color: white;
+             float: left;
+             font-size: 15px;
+             height: 45px;
+             width: 40%;
+            padding: 10px 15px;
+            margin: -10px 0 0 0; 
+            border: 2px solid #ccc; border-radius: 4px;">
+
+         </div>
+
 </main>
 
-		<div class="container">
+        <div class="container">
 
-        	<button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: #0000FF; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; width: 200px;">Vrati se nazad</button>
+            <button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: deepskyblue; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; width: 200px;">Vrati se nazad</button>
 
-		</div> 
-	<br><br>
-	
-	<script>
-		function KalkulatorStednje2() {
-	var glavnica = parseFloat(document.getElementById("novac1").value);
-	var kamata = parseFloat(document.getElementById("procenat").value);
-	var meseci = parseInt(document.getElementById("mesec").value);
+        </div> 
+    <br><br>
+    
+    <script>
+        function KalkulatorStednje2() {
+    var glavnica = parseFloat(document.getElementById("novac1").value);
+    var kamata = parseFloat(document.getElementById("procenat").value);
+    var meseci = parseInt(document.getElementById("mesec").value);
 
-	var zarada = glavnica * (1 + (kamata / 100 * (meseci / 12)));
-	
-	document.getElementById("novac2").value = zarada.toFixed(2);
+    var zarada = glavnica * (1 + (kamata / 100 * (meseci / 12)));
+    
+    document.getElementById("novac2").value = zarada.toFixed(2);
 }
-	</script>
+    </script>
 </body>
 </html>
