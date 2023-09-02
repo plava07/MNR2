@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+
     <style type="text/css">
 		body {   
 		    font-family: Arial;         
@@ -19,7 +20,49 @@
 			border: 1px solid grey;
 			box-shadow: 10px 10px 5px #888888;
 			border-radius: 10px;
+			overflow: auto;
 			}  
+
+			.box {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #888888;
+}
+
+
+			input[type=number] {
+        width: 80%;
+        padding: 10px 15px;
+        margin: 8px 8px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+    }
+
+    		select {
+        width: 40%;
+        padding: 10px 15px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+    }
+
+       button {
+             background-color: deepskyblue;
+             color: white;
+             float: left;
+             font-size: 15px;
+             height: 45px;
+             width: 40%;
+        	padding: 10px 15px;
+        	margin: -10px 0 0 0; 
+        	border: 2px solid #ccc;
+            border-radius: 4px;;
+            }
 	</style>
 	
 </head>
@@ -29,8 +72,6 @@
 	</header> 
 
 <main> 
-
-<div class="container">
 
     <h1 style="text-align: center;">Kalkulator - Konverter valuta</h1>
 
@@ -85,10 +126,9 @@
 
 	<br><br>
 
-    <button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: #0000FF; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer;">Vrati se nazad</button>
+    <button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: deepskyblue; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; width: 200px;">Vrati se nazad</button>
 
-         <div style="border: 2px solid blue; display: inline-block; padding: 10px; margin: 0 auto;">
-	<div class="box">
+	<div class="box" style="overflow: auto;">
         <div class="left-box">
             <select name="currency" class="currency"></select>
             <input type="number" name="" id="unos">
@@ -99,7 +139,7 @@
         </div>
 		<br>
 		
-    <button class="btn" id="izracunaj" style="background-color: #0000FF; color: white; float: right;">> Konvertuj</button>
+    <button id="izracunaj"> Konvertuj</button>
 	</div>
 
 </main> 
