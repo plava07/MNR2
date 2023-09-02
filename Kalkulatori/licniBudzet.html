@@ -6,30 +6,122 @@
 
 	<style type="text/css">
 		body {   
-		    font-family: Arial;         
-			background-color: #f0f0f0;
-		    }   
-		header {                       
-			text-align: center;
-			}
-		main {                         
-			background-color: white;     
-			width: 800px;
-			margin: auto;
-			padding: 20px; 
-			border: 1px solid grey;
-			box-shadow: 10px 10px 5px #888888;
-			border-radius: 10px;
-			} 
+            font-family: Arial;         
+            background-color: #f0f0f0;
+            }   
+        header {                       
+            text-align: center;
+            }
+        main {                         
+            background-color: white;     
+            width: 800px;
+            margin: auto;
+            padding: 20px; 
+            border: 1px solid grey;
+            box-shadow: 10px 10px 5px #888888;
+            border-radius: 10px;
+            }
 
-        .container {
-    background-color: #fff;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-        border-radius: 5px;
-    box-shadow: 0 0 10px #888888;
-     }
+            .calc {
+
+                margin: 10px auto;
+                padding: 8px;
+                /* border: 2px solid blue;*/
+                width: 70%;
+                overflow: auto;
+                box-shadow: 0 0 10px #888888;
+            }
+
+            .calc input[type=text] {
+                width: 100%;
+                padding: 10px 15px;
+                margin: 0px auto;
+                display: block;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .calc h3 {
+
+                font-size: 18px;
+                font-weight: bold;
+                margin: 12px 0 4px 0;
+            }
+
+            .calc input[type=button] {
+
+                background-color: blue;
+                color: white;
+                float: right;
+                font-size: 16px;
+                height: 45px;
+                width: 30%;
+                padding: 10px 15px;
+                border-radius: 4px;
+                margin-top: 12px;
+                border: 2px solid blue;
+                cursor: pointer;
+            }
+
+            .calc input[type=button]:hover{
+
+                background-color: white;
+                color: blue;
+            }
+
+            .calc table{
+                width: 100%;
+            }
+
+            .calc table td {
+
+                width: 33%;
+            }
+
+            .calc table input[type=button] {
+
+                background-color: blue;
+                color: white;
+                font-size: 16px;
+                height: 45px;
+                width: 100%;
+                padding: 10px 15px;
+                border-radius: 4px;
+                margin-top: 12px;
+                border: 2px solid blue;
+                cursor: pointer;
+            }
+
+            .calc table select {
+                font-size: 16px;
+                height: 40px;
+                width: 100%;
+                padding: 10px 15px;
+                border-radius: 4px;
+                border: 2px solid #ccc;
+            }
+
+            button {
+                position: fixed; 
+                bottom: 35px; 
+                right: 20px; 
+                z-index: 9999; 
+                background-color: blue; 
+                color: white; 
+                padding: 10px 15px; 
+                font-size: 16px; 
+                border: 2px solid blue; 
+                cursor: pointer; 
+                width: 200px;
+                border-radius: 4px;
+                border: 2px solid blue;
+            }
+
+            button:hover{
+
+                background-color: white;
+                color: blue;
+            }
 
 	</style>
 	
@@ -40,7 +132,7 @@
 	</header> 
 
 	<main> 
-		<div id="app">
+		<div>
    		 <h1 style="text-align: center;">Kalkulator - lični budžet</h1>
 
                 <article> 
@@ -73,176 +165,85 @@
                 <p>Sada kada imate svoj lični budžet, možete ga analizirati kako biste videli kako trošite novac. Da li primećujete nešto što biste mogli da promenite ili poboljšate? Možda biste mogli da smanjite troškove za zabavu ili da povećate štednju. Analiza budžeta pomaže vam da donesete <b>bolje finansijske odluke</b>. <br><br> Korišćenjem osnovnih operacija sabiranja i oduzimanja, možete pratiti svoje prihode, rashode i planirati kako da bolje upravljate svojim novcem. Ako želite da uštedite novac za putovanje ili za nešto posebno, možete koristiti budžet da biste odredili koliko novca treba da štedite svakog meseca kako biste postigli svoje ciljeve.</p> 
 
             </article>
+        </div>
 
-	<br><br>
+        <div class="calc">
 
- <div class="container">
-    <table>
-        <table class="kolone">
-            <thead>
-            <tr>
-                <th>Opis</th>
-                <th>Tip</th>
-                <th>Iznos (RSD)</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody class="unos">
-            <tr>
-                <td>
-                    <input class="input input-description" type="text"
-                           placeholder="Dodajte opis" id="tekst" style="width: 100%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;">
-                </td>
-
-                <div class="spacer"></div>
-
-                <td>
-                    <select class="input input-type" style="width: 120%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;">
-                        <option value="prihod" id="prihod">Prihod</option>
-                        <option value="rashod" id="rashod">Rashod</option>
-                    </select>
-                </td>
-
-                <div class="spacer"></div>
-
-                <td>
-                    <input type="number" class="input input-amount" id="novac1" style="width: 90%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px; float: right;">
-                </td>
-                  </tr>
-
-                  
+            <table class="unos">
                 <tr>
-                <td>
-                    <input class="input input-description" type="text"
-                           placeholder="Dodajte opis" id="tekst" style="width: 100%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;">
-                </td>
-
-                <div class="spacer"></div>
-
-                <td>
-                    <select class="input input-type" style="width: 120%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;">
-                        <option value="prihod" id="prihod">Prihod</option>
-                        <option value="rashod" id="rashod">Rashod</option>
-                    </select>
-                </td>
-
-                <div class="spacer"></div>
-
-                <td>
-                    <input type="number" class="input input-amount" id="novac1" style="width: 90%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px; float: right;">
-                </td>
-
-            </tr>
+                    <th>Opis</th>
+                    <th>Tip</th>
+                    <th>Iznos (RSD)</th>
+                </tr>
 
                 <tr>
-                <td>
-                    <input class="input input-description" type="text"
-                           placeholder="Dodajte opis" id="tekst" style="width: 100%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;">
-                </td>
+                    <td>
+                        <input type="text" placeholder="Dodajte opis" id="tekst">
+                    </td>
+                    <td>
+                        <select class="input-type">
+                            <option>Prihod</option>
+                            <option>Rashod</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" id="novac1" class="iznos">
+                    </td>
+                </tr>
 
-                <div class="spacer"></div>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Dodajte opis" id="tekst">
+                    </td>
+                    <td>
+                        <select class="input-type">
+                            <option>Prihod</option>
+                            <option>Rashod</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" id="novac1" class="iznos">
+                    </td>
+                </tr>
 
-                <td>
-                    <select class="input input-type" style="width: 120%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;">
-                        <option value="prihod" id="prihod">Prihod</option>
-                        <option value="rashod" id="rashod">Rashod</option>
-                    </select>
-                </td>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Dodajte opis" id="tekst">
+                    </td>
+                    <td>
+                        <select class="input-type">
+                            <option>Prihod</option>
+                            <option>Rashod</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" id="novac1" class="iznos">
+                    </td>
+                </tr>
+            </table>
 
-                <div class="spacer"></div>
+            <table>
+                <tr>
+                    <td>
+                        <input type="button" value="Novi unos" onclick="noviUnos()">
+                    </td>
+                    <td>
+                        <div></div>
+                    </td>
+                    <td>
+                        <input type="button" value="Ukupno" onclick="Ukupno()">
+                    </td>
+                </tr>
+            </table>
 
-                <td>
-                    <input type="number" class="input input-amount" id="novac1" style="width: 90%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px; float: right;">
-                </td>
+            <h3>Saldo (RSD)</h3>
+            <input type="text" id="novac2">
+        </div>
 
-            </tr>
-            </tbody>
-        </table>
-        <h3>
-            <input type="button" value="Novi unos" onclick="noviUnos()" style="background-color: deepskyblue;
-             color: white;
-             float: left;
-             font-size: 15px;
-             height: 45px;
-             width: 30%;
-            padding: 10px 15px;
-            margin: -10px 0 0 0; 
-            border: 2px solid #ccc; border-radius: 4px;">
+        <button onclick="window.location.href='../index.html'">Vrati se nazad</button>
 
-            <input type="button" value="Ukupno" onclick="Ukupno()" style="background-color: deepskyblue;
-             color: white;
-             float: right;
-             font-size: 15px;
-             height: 45px;
-             width: 30%;
-            padding: 10px 15px;
-            margin: -10px 0 0 0; 
-            border: 2px solid #ccc; border-radius: 4px;"> <br><br>
-        </h3>
-
-        <thead>
-            <tr>
-                <th>Saldo</th>
-            </tr>
-            </thead>
-
-        <h3><input type="text" id="novac2" class="form-control" style="width: 60%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;">RSD</h3>
-
-    </table>
- </div>
-
-	    <br><br>
 </main>
+
 
 <script>
 
@@ -251,7 +252,6 @@
         const tr = document.createElement('tr');
         const td1 = document.createElement('td');
         const input1 = document.createElement('input');
-        input1.className = 'input input-description';
         input1.type = 'text';
         input1.placeholder = 'Dodajte opis';
         input1.id = 'tekst';
@@ -259,8 +259,8 @@
         tr.appendChild(td1);
         const td2 = document.createElement('td');
         const select = document.createElement('select');
-        select.className = 'input input-type';
         const option1 = document.createElement('option');
+        select.className = "input-type";
         option1.value = 'prihod';
         option1.id = 'prihod';
         option1.textContent = 'Prihod';
@@ -274,9 +274,9 @@
         tr.appendChild(td2);
         const td3 = document.createElement('td');
         const input2 = document.createElement('input');
-        input2.type = 'number';
-        input2.className = 'input input-amount';
+        input2.type = 'text';
         input2.id = 'novac1';
+        input2.className ='iznos';
         td3.appendChild(input2);
         tr.appendChild(td3);
         unos.appendChild(tr);
@@ -287,14 +287,16 @@
         const unosRows = document.querySelectorAll('.unos tr');
         unosRows.forEach((row) => {
             const select = row.querySelector('.input-type');
-            const tip = select.value;
-            const uneseno = parseInt(row.querySelector('.input-amount').value);
+            if (select != null) {
+                const tip = select.value;
+                const uneseno = parseInt(row.querySelector('.iznos').value);
 
-                if(tip === "prihod") {
-                    suma = suma + uneseno;
-                } else {
-                    suma = suma - uneseno;
-                }
+                    if(tip === "Prihod") {
+                        suma = suma + uneseno;
+                    } else {
+                        suma = suma - uneseno;
+                    }
+            }
         });
 
         document.getElementById("novac2").value = suma;
@@ -302,10 +304,5 @@
 
 </script>
 
-    	<div class="container">
-
-        	<button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: deepskyblue; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; width: 200px;">Vrati se nazad</button>
-
-		</div> 
 </body>
 </html>
