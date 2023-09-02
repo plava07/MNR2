@@ -7,52 +7,90 @@
 
 	<style type="text/css">
 		body {   
-		    font-family: Arial;         
-			background-color: #f0f0f0;
-		    }   
-		header {                       
-			text-align: center;
-			}
-		main {                         
-			background-color: white;     
-			width: 800px;
-			margin: auto;
-			padding: 20px; 
-			border: 1px solid grey;
-			box-shadow: 10px 10px 5px #888888;
-			border-radius: 10px;
-			}
+            font-family: Arial;         
+            background-color: #f0f0f0;
+            }   
+        header {                       
+            text-align: center;
+            }
+        main {                         
+            background-color: white;     
+            width: 800px;
+            margin: auto;
+            padding: 20px; 
+            border: 1px solid grey;
+            box-shadow: 10px 10px 5px #888888;
+            border-radius: 10px;
+            }
 
-.container {
-    background-color: #fff;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-     border-radius: 5px;
-    box-shadow: 0 0 10px #888888;
+            .calc {
+
+margin: 10px auto;
+padding: 8px;
+/* border: 2px solid blue;*/
+width: 70%;
+overflow: auto;
+box-shadow: 0 0 10px #888888;
 }
 
- input[type=text] {
-        width: 80%;
-        padding: 10px 15px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-    }
+.calc input[type=text] {
+width: 94%;
+padding: 10px 15px;
+margin: 0px auto;
+display: block;
+border: 2px solid #ccc;
+border-radius: 4px;
+}
 
-  button {
-             background-color: #0000FF;
-             color: white;
-             float: left;
-             font-size: 15px;
-             height: 45px;
-             width: 20%;
-            padding: 10px 15px;
-            margin: -10px 0 0 0; 
-            border-radius: 4px;
-            }
-		
+.calc h3 {
+
+font-size: 18px;
+font-weight: bold;
+margin: 12px 0 4px 0;
+}
+
+.calc input[type=button] {
+
+background-color: blue;
+color: white;
+float: right;
+font-size: 16px;
+height: 45px;
+width: 30%;
+padding: 10px 15px;
+border-radius: 4px;
+margin-top: 12px;
+border: 2px solid blue;
+cursor: pointer;
+}
+
+.calc input[type=button]:hover{
+
+background-color: white;
+color: blue;
+}
+
+button {
+position: fixed; 
+bottom: 35px; 
+right: 20px; 
+z-index: 9999; 
+background-color: blue; 
+color: white; 
+padding: 10px 15px; 
+font-size: 16px; 
+border: 2px solid blue; 
+cursor: pointer; 
+width: 200px;
+border-radius: 4px;
+border: 2px solid blue;
+}
+
+button:hover{
+
+background-color: white;
+color: blue;
+}
 	</style>
 	
 </head>
@@ -109,55 +147,35 @@
 		 <br>S obzirom da je zvanična valuta Srbije RSD, <b>porez ne plaćate u evrima, nego u dinarima</b>, te je potrebno iznose i konvertovati iz evra u dinare. Ukoliko ste zaboravili kako se to radi, ponovo pogledajte kalkulator <a href="valute3.html">konverzije valuta</a>.</p> 
 
             </article>  
-	<br><br>
 
 
-            <div class="container" style="overflow: auto;">
-        <h3>Plata 1</h3>
-	<input type="text" id="novac1" class="form-control"> € <br>
+        <div class="calc">
+            <h3>Plata 1 (EUR)</h3>
+	        <input type="text" id="novac1">
         
-	<h3>Plata 2</h3>
-	<input type="text" id="novac2" class="form-control"> € <br>
-		    
-        <h3>Plata 3</h3>
-	<input type="text" id="novac3" class="form-control"> € <br>
-		    
-        <h3>Porez po modelu A</h3>
-	<input type="text" id="iznos1" class="form-control"> RSD <br><br>
+            <h3>Plata 2 (EUR)</h3>
+            <input type="text" id="novac2">
+                
+            <h3>Plata 3 (EUR)</h3>
+            <input type="text" id="novac3">
+                
+            <h3>Porez po modelu A (RSD)</h3>
+            <input type="text" id="iznos1"> 
 
-        <input type="button" value="Izračunaj" onclick="KalkulatorPorezaA()" style="background-color: deepskyblue;
-             color: white;
-             float: left;
-             font-size: 15px;
-             height: 45px;
-             width: 45%;
-            padding: 10px 15px;
-            margin: -10px 0 0 0; 
-            border: 2px solid #ccc; border-radius: 4px;"> <br><br><br>
+            <input type="button" value="Izračunaj" onclick="KalkulatorPorezaA()">
 
-        <h3>Porez po modelu B</h3>
-	<input type="text" id="iznos2" class="form-control"> RSD <br><br>
+            <div style="clear:both"></div>
 
-        <input type="button" value="Izračunaj" onclick="KalkulatorPorezaB()" style="background-color: deepskyblue;
-             color: white;
-             float: left;
-             font-size: 15px;
-             height: 45px;
-             width: 45%;
-            padding: 10px 15px;
-            margin: -10px 0 0 0; 
-            border: 2px solid #ccc; border-radius: 4px;">
+            <h3>Porez po modelu B (RSD)</h3>
+            <input type="text" id="iznos2">
 
-</div>
+            <input type="button" value="Izračunaj" onclick="KalkulatorPorezaB()" >
+
+        </div>
 
 </main>
 
-		<div class="container">
-
-        	<button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: deepskyblue; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; width: 200px;">Vrati se nazad</button>
-
-		</div> 
-
+        	<button onclick="window.location.href='../index.html'" >Vrati se nazad</button>
 
 	<br><br>
 
