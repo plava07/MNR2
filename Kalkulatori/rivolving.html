@@ -22,24 +22,36 @@
 			border-radius: 10px;
 			}
 
-	  input[type=text] {
-        width: 70%;
-        padding: 10px 15px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-    }
+		.container {
+    			background-color: #fff;
+    			max-width: 400px;
+    			margin: 0 auto;
+    			padding: 20px;
+    			border-radius: 5px;
+    			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			}
+			
+		 input[type=text] {
+     			width: 80%;
+       			padding: 10px 15px;
+       			margin: 8px 0;
+     			box-sizing: border-box;
+		        border: 2px solid #ccc;
+     			border-radius: 4px;
+		    	}
 
-        input[type=button] {
-             background-color: #0000FF;
-             color: white;
-             float: right;
-             margin-left: 10px;
-             font-size: 15px;
-             height: 45px; /
-            }
-		
+ 	 	button {
+             		background-color: #0000FF;
+             		color: white;
+             		float: left;
+             		font-size: 15px;
+             		height: 45px;
+             		width: 20%;
+            		padding: 10px 15px;
+            		margin: -10px 0 0 0; 
+            		border-radius: 4px;
+            		}
+
 	</style>
 	
 </head>
@@ -115,8 +127,6 @@
 
 	  <br>  <br>
 
-<div style="text-align: center;">
-    <div style="border: 2px solid blue; padding: 15px; margin: 0 auto; text-align: left;">
             <div class="container">
 			<h3>Trenutno zaduženje</h3>
 		    	<input type = "text" id = "novac1" class="form-control"> RSD <br>
@@ -128,18 +138,16 @@
 		    	<input type = "text" id = "procenat" class="form-control"> % <br>
 		    
 			<h3>Raspoloživo u narednom mesecu</h3>
-		    	<input type = "text" id = "novac3" class="form-control"> RSD
+		    	<input type = "text" id = "novac3" class="form-control"> RSD <br>
 
 			<input type="button" value="Izračunaj" onclick="KalkulatorRivolving()">
-		</div>
-	      </div>
 	</div>
 </main>
 	  <br>  <br>
 
 		<div class="container">
 
-        	<button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: #0000FF; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer;">Vrati se nazad</button>
+        	<button onclick="window.location.href='../index.html'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: #0000FF; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; width: 200px;">Vrati se nazad</button>
 
 		</div> 
 
